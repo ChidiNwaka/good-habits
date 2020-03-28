@@ -1,1 +1,28 @@
-<p>habits works!</p>
+<div class="selection_div">
+    <button kendoButton  primary="true" (click)="onShowTable()">List Of Habits</button>
+    <button kendoButton  [look]="'outline'" (click)="onCreateHabit()">Create A New Habit</button>
+</div>
+<app-grid-edit-form *ngIf="!showTable"></app-grid-edit-form>
+<kendo-grid 
+    *ngIf="showTable"
+    [kendoGridBinding]="habits"
+    [sortable]="{
+        allowUnsort: true,
+        mode: 'multiple',
+        initialDirection: 'desc'
+    }" 
+    [pageable]="{
+        buttonCount: 3,
+        pageSizes: [5, 10, 20]
+    }"
+    [pageSize]="10"
+    [filterable]="true"
+    [groupable]="true"
+    [resizable]="true"
+>
+    <kendo-grid-column field="title" width="200"></kendo-grid-column>
+    <kendo-grid-column field="createdAt" width="200"></kendo-grid-column>
+    <kendo-grid-column field="daysCompleted" width="60"></kendo-grid-column>
+    <kendo-grid-column field="priority" width="60"></kendo-grid-column>
+    <kendo-grid-column field="description"  width="200"></kendo-grid-column>
+</kendo-grid>

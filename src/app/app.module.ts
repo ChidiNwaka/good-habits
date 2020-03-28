@@ -9,7 +9,10 @@ import { HomeComponent } from './pages/home/home.component';
 import { DailyStatusComponent } from './pages/daily-status/daily-status.component';
 import { HabitsComponent } from './pages/habits/habits.component';
 import { TopHeaderComponent } from './components/layout/top-header/top-header.component';
-import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component'; 
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { GridModule } from '@progress/kendo-angular-grid';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { GridEditFormComponent } from './components/forms/grid-edit-form/grid-edit-form.component';
 
 const appRoutes: Routes = [
   {path: 'status', component: DailyStatusComponent},
@@ -28,13 +31,16 @@ const appRoutes: Routes = [
     DailyStatusComponent,
     HabitsComponent,
     TopHeaderComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    GridEditFormComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
     BrowserModule,
     AppRoutingModule,
     ButtonsModule,
+    GridModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
