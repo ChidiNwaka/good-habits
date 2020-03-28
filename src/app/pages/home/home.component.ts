@@ -9,13 +9,7 @@ export class HomeComponent implements OnInit {
 
   constructor() { }
 
-  greeting = 'Hello, welcome to our website!';
-
   ngOnInit(): void {
-  }
-
-  onButtonClick() {
-      this.greeting = 'Hello, welcome to our page!';
   }
 
 }
