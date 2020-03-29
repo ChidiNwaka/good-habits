@@ -9,7 +9,7 @@ import { habits } from 'src/app/mockData/habits';
 export class HabitsComponent implements OnInit {
 
   habits =  habits;
-  showTable = true; 
+  showTable = true;
 
   constructor() { }
 
