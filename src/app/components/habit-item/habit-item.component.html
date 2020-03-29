@@ -1,0 +1,12 @@
+ <p>
+    <input
+      (change)="toggleItem(habit)"
+      type="checkbox"
+      id="{{ habit.id }}"
+      [checked]="habit.completed"
+    />
+    <label for="{{ habit.id }}">
+      {{ habit.title }}
+    </label>
+    <button (click)="deleteItem(habit)" class="del">X</button>
+  </p>

@@ -13,6 +13,8 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 import { GridModule } from '@progress/kendo-angular-grid';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { GridEditFormComponent } from './components/forms/grid-edit-form/grid-edit-form.component';
+import { AddHabitComponent } from './components/add-habit/add-habit.component';
+import { HabitItemComponent } from './components/habit-item/habit-item.component';
 
 const appRoutes: Routes = [
   {path: 'status', component: DailyStatusComponent},
@@ -32,7 +34,9 @@ const appRoutes: Routes = [
     HabitsComponent,
     TopHeaderComponent,
     PageNotFoundComponent,
-    GridEditFormComponent
+    GridEditFormComponent,
+    AddHabitComponent,
+    HabitItemComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
