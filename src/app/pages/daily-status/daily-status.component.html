@@ -4,7 +4,7 @@
 
 <app-habit-item *ngFor="let habit of habits"
     [habit]="habit" 
-    [(deleteHabit)]="deleteHabit($event)"
+    (deleteHabit)="deleteHabit($event)"
     (onToggle)="onToggle($event)"
 ></app-habit-item>
 

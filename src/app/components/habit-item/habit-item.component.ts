@@ -9,11 +9,9 @@ import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 export class HabitItemComponent implements OnInit {
 
   @Input() habit;
-
-  @Output() nameChange: EventEmitter<any> = new EventEmitter();
-
-  // @Output() nameChange: EventEmitter<any> = new EventEmitter();
+  // tslint:disable-next-line: no-output-on-prefix
   @Output() onDelete: EventEmitter<any> = new EventEmitter();
+  // tslint:disable-next-line: no-output-on-prefix
   @Output() onToggle: EventEmitter<any> = new EventEmitter();
 
   constructor() { }
