@@ -11,7 +11,7 @@
 //     }
 //   ]
 
-import { IHabit } from '../model/habits';
+import { IHabit } from '../models/habits';
 
 export const habits: IHabit[] = [
     {

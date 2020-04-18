@@ -5,7 +5,7 @@
 <app-grid-edit-form *ngIf="!showTable"></app-grid-edit-form>
 <kendo-grid 
     *ngIf="showTable"
-    [kendoGridBinding]="habits"
+    [kendoGridBinding]="habits$"
     [sortable]="{
         allowUnsort: true,
         mode: 'multiple',

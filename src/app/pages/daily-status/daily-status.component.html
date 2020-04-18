@@ -1,10 +1,9 @@
 <h1>My Daily Status</h1>
 <p>Below is the list of habits I'm creating because they are necessary for my success. </p>
 
-
-<app-habit-item *ngFor="let habit of habits"
+<app-habit-item *ngFor="let habit of dailyHabits"
     [habit]="habit" 
-    (deleteHabit)="deleteHabit($event)"
+    (onDelete)="deleteHabit($event)"
     (onToggle)="onToggle($event)"
 ></app-habit-item>
 

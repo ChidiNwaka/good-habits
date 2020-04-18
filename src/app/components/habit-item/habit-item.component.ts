@@ -1,4 +1,4 @@
-import { ICreateHabit } from './../../model/habits';
+import { IDailyHabit } from '../../models/habits';
 import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 
 @Component({
@@ -19,13 +19,13 @@ export class HabitItemComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  toggleItem(habit: ICreateHabit): void {
+  toggleItem(habit: IDailyHabit): void {
     habit.completed = !habit.completed;
     console.log(habit.completed);
     this.onToggle.emit(habit);
   }
 
-  deleteItem(habit: ICreateHabit) {
+  deleteItem(habit: IDailyHabit) {
     console.log(`habit ${habit} deleted...`);
     this.onDelete.emit(habit);
   }

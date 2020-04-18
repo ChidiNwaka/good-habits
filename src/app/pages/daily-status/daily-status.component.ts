@@ -1,5 +1,7 @@
+import { IHabit } from './../../models/habits';
+import { HabitsService } from 'src/app/services/habits.service';
 import { habits } from 'src/app/mockData/habits';
-import { ICreateHabit } from './../../model/habits';
+import { IDailyHabit } from '../../models/habits';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -9,13 +11,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DailyStatusComponent implements OnInit {
 
-  habits: ICreateHabit[] = [];
+  dailyHabits: IDailyHabit[] = [];
 
-  constructor() { }
+  constructor(private habitsService: HabitsService) { }
 
   ngOnInit(): void {
 
-    this.habits = habits.map(habit => {
+    this.dailyHabits = habits.map(habit => {
       return {
         id: habit.id,
         title: habit.title,
@@ -24,13 +26,15 @@ export class DailyStatusComponent implements OnInit {
     });
   }
 
-  deleteHabit(habit: ICreateHabit) {
-    console.log('In Habits / parent', habit);
+  deleteHabit(dailyHabit: IDailyHabit) {
+    console.log('In Habits / parent', dailyHabit);
   }
 
-  onToggle(habit: ICreateHabit) {
+  onToggle(dailyHabit: IDailyHabit) {
 
-    this.habits = this.habits.map(obj => obj.id === habit.id ? {...obj, completed: habit.completed} : obj);
+    // On UI
+    this.dailyHabits = this.dailyHabits.map(obj => obj.id === dailyHabit.id ? {...obj, completed: dailyHabit.completed} : obj);
+
   }
 
 }
