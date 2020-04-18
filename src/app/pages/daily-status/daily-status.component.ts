@@ -1,4 +1,3 @@
-import { IHabit } from './../../models/habits';
 import { HabitsService } from 'src/app/services/habits.service';
 import { habits } from 'src/app/mockData/habits';
 import { IDailyHabit } from '../../models/habits';

@@ -1,0 +1,12 @@
+ <p>
+    <input
+      (change)="toggleItem(dailyHabit)"
+      type="checkbox"
+      id="{{ dailyHabit.id }}"
+      [checked]="dailyHabit.completed"
+    />
+    <label for="{{ dailyHabit.id }}">
+      {{ dailyHabit.title }}
+    </label>
+    <button (click)="deleteItem(dailyHabit)" class="del">X</button>
+  </p>
