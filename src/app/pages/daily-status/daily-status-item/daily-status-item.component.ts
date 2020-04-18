@@ -21,12 +21,10 @@ export class DailyStatusItemComponent implements OnInit {
 
   toggleItem(dailyHabit: IDailyHabit): void {
     dailyHabit.completed = !dailyHabit.completed;
-    console.log(dailyHabit.completed);
     this.onToggle.emit(dailyHabit);
   }
 
   deleteItem(dailyHabit: IDailyHabit) {
-    console.log(`habit ${dailyHabit} deleted...`);
     this.onDelete.emit(dailyHabit);
   }
 }

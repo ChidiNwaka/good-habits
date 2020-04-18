@@ -1,6 +1,5 @@
 import { IHabit } from '../models/habits';
 import { Injectable } from '@angular/core';
-import { habits } from 'src/app/mockData/habits';
 import { Observable, of } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
@@ -15,7 +14,6 @@ const httpOptions = {
 })
 export class HabitsService {
 
-  habits: IHabit[] = habits;
   habitsUrl = 'http://localhost:3000/api/v1/habits';
 
   constructor(private http: HttpClient) { }
