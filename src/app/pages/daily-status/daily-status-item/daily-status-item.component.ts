@@ -10,9 +10,9 @@ export class DailyStatusItemComponent implements OnInit {
 
   @Input() dailyHabit;
   // tslint:disable-next-line: no-output-on-prefix
-  @Output() onDelete: EventEmitter<any> = new EventEmitter();
+  @Output() onDelete: EventEmitter<IDailyHabit> = new EventEmitter();
   // tslint:disable-next-line: no-output-on-prefix
-  @Output() onToggle: EventEmitter<any> = new EventEmitter();
+  @Output() onToggle: EventEmitter<IDailyHabit> = new EventEmitter();
 
   constructor() { }
 
