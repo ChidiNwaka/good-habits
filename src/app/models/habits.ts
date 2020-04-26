@@ -7,7 +7,7 @@ export interface IHabit {
     createdAt: string;
 }
 
-export interface ICreateHabit {
+export interface IDailyHabit {
     id: string;
     title: string;
     completed: boolean;

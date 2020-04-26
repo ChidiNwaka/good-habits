@@ -1,19 +1,19 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { HabitItemComponent } from './habit-item.component';
+import { DailyStatusItemComponent } from './daily-status-item.component';
 
-describe('HabitItemComponent', () => {
-  let component: HabitItemComponent;
-  let fixture: ComponentFixture<HabitItemComponent>;
+describe('DailyStatusItemComponent', () => {
+  let component: DailyStatusItemComponent;
+  let fixture: ComponentFixture<DailyStatusItemComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ HabitItemComponent ]
+      declarations: [ DailyStatusItemComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(HabitItemComponent);
+    fixture = TestBed.createComponent(DailyStatusItemComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -1,5 +1,6 @@
+import { IHabit } from '../../models/habits';
 import { Component, OnInit } from '@angular/core';
-import { habits } from 'src/app/mockData/habits';
+import { HabitsService } from 'src/app/services/habits.service';
 
 @Component({
   selector: 'app-habits',
@@ -8,12 +9,15 @@ import { habits } from 'src/app/mockData/habits';
 })
 export class HabitsComponent implements OnInit {
 
-  habits =  habits;
+  habits$: IHabit[];
   showTable = true;
 
-  constructor() { }
+  constructor(private habitsService: HabitsService) { }
 
   ngOnInit(): void {
+    this.habitsService.getHabits().subscribe(response => {
+      this.habits$ = response;
+    });
   }
 
   onCreateHabit(): void {

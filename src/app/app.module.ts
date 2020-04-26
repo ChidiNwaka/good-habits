@@ -14,7 +14,9 @@ import { GridModule } from '@progress/kendo-angular-grid';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { GridEditFormComponent } from './components/forms/grid-edit-form/grid-edit-form.component';
 import { AddHabitComponent } from './components/add-habit/add-habit.component';
-import { HabitItemComponent } from './components/habit-item/habit-item.component';
+import { StoreModule } from '@ngrx/store';
+import { HttpClientModule } from '@angular/common/http';
+import { DailyStatusItemComponent } from './pages/daily-status/daily-status-item/daily-status-item.component';
 
 const appRoutes: Routes = [
   {path: 'status', component: DailyStatusComponent},
@@ -36,7 +38,7 @@ const appRoutes: Routes = [
     PageNotFoundComponent,
     GridEditFormComponent,
     AddHabitComponent,
-    HabitItemComponent
+    DailyStatusItemComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
@@ -45,6 +47,8 @@ const appRoutes: Routes = [
     ButtonsModule,
     GridModule,
     BrowserAnimationsModule,
+    HttpClientModule,
+    StoreModule.forRoot({}, {}),
   ],
   providers: [],
   bootstrap: [AppComponent]
